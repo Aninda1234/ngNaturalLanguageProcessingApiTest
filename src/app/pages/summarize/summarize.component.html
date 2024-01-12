@@ -1,0 +1,11 @@
+<div>
+    <h2>Summarize Page</h2>
+    <textarea [(ngModel)]="text" placeholder="Enter text to summarize"></textarea>
+    <button (click)="summarize()">Submit</button>
+
+    <h3>Summary:</h3>
+    <div *ngIf="summary">
+      <p>{{ summary }}</p>
+    </div>
+</div>
+

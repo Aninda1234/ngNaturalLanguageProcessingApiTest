@@ -1,0 +1,19 @@
+<!-- pages/topics/topics.component.html -->
+<div>
+    <h2>Topics Page</h2>
+    <textarea [(ngModel)]="text" placeholder="Enter text"></textarea>
+    <button (click)="generateTopics()">Generate Topics</button>
+
+    <h3>Generated Topics & Summary:</h3>
+    <div *ngIf="topics.length > 0">
+      <ul>
+        <li *ngFor="let topic of topics">#{{ topic }}</li>
+        <p> {{ summary }}</p>
+      </ul>
+    </div>
+    <div *ngIf="error">
+      <p>Error: {{ error }}</p>
+    </div>
+</div>
+
+  

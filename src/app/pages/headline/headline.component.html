@@ -1,0 +1,17 @@
+<!-- pages/headline/headline.component.html -->
+<div>
+    <h2>Headline Page</h2>
+    <textarea [(ngModel)]="text" placeholder="Enter text"></textarea>
+    <button (click)="generateHeadline()">Generate Headline</button>
+
+    <h3>Generated Headline with Summary:</h3>
+    <div *ngIf="headline">
+      <p>{{ headline }}</p>
+      <p>{{ summary }}</p>
+    </div>
+    <div *ngIf="error">
+      <p>Error: {{ error }}</p>
+    </div>
+</div>
+
+  

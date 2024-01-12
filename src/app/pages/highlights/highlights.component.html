@@ -1,0 +1,20 @@
+<!-- pages/highlights/highlights.component.html -->
+
+<div>
+  <div>
+    <textarea [(ngModel)]="text" placeholder="Enter text..."></textarea>
+    <button (click)="generateHighlights()">Generate Highlights</button>
+  </div>
+  
+  <div *ngIf="highlights.length > 0">
+    <h3>Highlighted Text:</h3>
+    <div>
+      <span *ngFor="let highlight of highlights" [innerHTML]="highlight"></span>
+    </div>
+  </div>
+  
+  <div *ngIf="error">
+    <p class="error">{{ error }}</p>
+  </div>
+</div>
+  

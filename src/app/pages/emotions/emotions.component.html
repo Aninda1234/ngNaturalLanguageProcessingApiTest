@@ -1,0 +1,20 @@
+<!-- pages/emotions/emotions.component.html -->
+
+<div>
+    <div>
+      <textarea [(ngModel)]="text" placeholder="Enter text..."></textarea>
+      <button (click)="analyzeEmotions()">Analyze Emotions</button>
+    </div>
+    
+    <div *ngIf="emotions.length > 0">
+      <h3>Emotions found in the Text: </h3>
+      <div *ngFor = "let emotion of emotions">
+        {{ emotion }}
+      </div>
+    </div>
+    
+    <div *ngIf="error">
+      <p class="error">{{ error }}</p>
+    </div>
+</div>
+    
